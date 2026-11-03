@@ -1,0 +1,30 @@
+# --- local environment -------------------------------------------------
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# --- secrets & machine-local config ------------------------------------
+# the real credential file is 0600 and MUST never be committed
+imou-camera.env
+*.env
+!imou-camera.env.example
+settings.json
+
+# --- captured media ----------------------------------------------------
+# recordings, snapshots and screenshots of a real camera view are private
+*.mp4
+*.mkv
+*.dav
+*.jpg
+*.jpeg
+/preview.png
+/settings-preview.png
+/screenshots/
+
+# --- editors / OS ------------------------------------------------------
+.DS_Store
+*.swp
+.vscode/
+.idea/

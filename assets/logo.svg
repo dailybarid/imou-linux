@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Imou on Linux">
+  <title>Imou on Linux</title>
+  <defs>
+    <linearGradient id="accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5b9bff"/>
+      <stop offset="1" stop-color="#366cd6"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="512" height="512" rx="112" fill="url(#accent)"/>
+
+  <g fill="#ffffff">
+    <!-- camera body -->
+    <rect x="72" y="141" width="368" height="251" rx="45"/>
+    <!-- viewfinder bump -->
+    <rect x="150" y="110" width="120" height="50" rx="18"/>
+    <!-- lens ring -->
+    <circle cx="256" cy="276" r="70"/>
+    <!-- status LED -->
+    <circle cx="113" cy="188" r="15"/>
+  </g>
+
+  <!-- lens interior shows the background gradient through the ring -->
+  <circle cx="256" cy="276" r="43" fill="url(#accent)"/>
+  <!-- highlight glint -->
+  <circle cx="246" cy="263" r="17" fill="#ffffff"/>
+</svg>

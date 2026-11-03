@@ -1,0 +1,20 @@
+[Unit]
+Description=Imou camera continuous local recorder
+Documentation=https://github.com/dailybarid/imou-linux
+# the camera is often reachable only a few seconds after the network comes up;
+# the recorder retries by itself, this just shortens the gap
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+EnvironmentFile=%h/.config/imou-camera.env
+ExecStart=%h/Projects/imou-linux/imou-record.sh
+# always: recover from any unexpected exit, including a killed child.
+# An explicit `systemctl --user stop` is still honoured.
+Restart=always
+RestartSec=20
+Nice=5
+
+[Install]
+WantedBy=default.target

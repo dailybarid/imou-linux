@@ -135,17 +135,6 @@ Firmware facts, not bugs to report:
 If you pull the microSD, the `.dav` clips remux losslessly:
 `ffmpeg -f dhav -i clip.dav -c copy clip.mp4`.
 
-## Privacy
-
-No camera screenshots, serial numbers or credentials are published in this
-repository, and captured media, the credential file and local settings are all
-gitignored. A screenshot of a working camera is a picture of someone's home or
-street — it does not belong in a public repo.
-
-The password sits in a `600` file because the systemd unit and the launcher must
-read it non-interactively. If that is not acceptable, use `systemd-creds` or run
-the GUI with `IMOU_PASS` exported in your own session.
-
 ## Credits
 
 The DVRIP surface and the `:8086` XAV layout were informed by the community work in
